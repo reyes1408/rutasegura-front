@@ -63,7 +63,7 @@ const chartSetting = {
     },
   ],
   series: [{ dataKey: "monto", label: "Ganancias mensuales", valueFormatter }],
-  height: 600,
+  height: 550,
   sx: {
     [`& .${axisClasses.directionY} .${axisClasses.label}`]: {
       transform: "translateX(-10px)",
@@ -76,7 +76,7 @@ const Grafica = () => {
   const tickLabelPlacement = "middle";
 
   return (
-    <div className="w-full shadow mt-10 rounded p-5">
+    <div id="grafica_id" className="w-full shadow shadow-gray-400 mt-10 rounded justify-between p-5">
       <div className="flex">
         <div className="w-1/2">
           <p className="text-2xl font-semibold">Ganancias mensuales</p>

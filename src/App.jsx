@@ -6,6 +6,7 @@ import efectivo from './assets/efectivo.png'
 import colectivo from './assets/colectivo.png'
 import cursor from './assets/cursor.png'
 import volante from './assets/volante.png'
+import Tabla from "./components/Tabla";
 
 const cardItems = [
   { titulo: "Ganancias totales", valor: "$12,500", image: efectivo },
@@ -18,7 +19,7 @@ export default function App() {
   return (
     <div className="w-auto">
       <NavBar />
-      <div className="px-20 pt-10">
+      <div id="estadisticas_id" className="px-20 pt-10">
         <div className="grid grid-cols-2 gap-10">
           {
             cardItems.map(( {titulo, valor, image}, index ) => (
@@ -31,6 +32,7 @@ export default function App() {
           }
         </div>
         <Grafica />
+        <Tabla />
       </div>
     </div>
   );
